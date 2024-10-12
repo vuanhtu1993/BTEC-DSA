@@ -1,21 +1,22 @@
 
 // import package
-import DataStructure.LinkedList;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        LinkedList list = new LinkedList();
-        list.add(10);
-        list.add(20);
-        list.add(50);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.add(100);
-        list.print();
+        func3();
+    }
+
+    public static void func1() {
+        System.out.println("Function1");
+    }
+
+    public static void func2() {
+        func1();
+        System.out.println("Function2");
+    }
+
+    public static void func3() {
+        func2();
+        System.out.println("Function3");
     }
 }
