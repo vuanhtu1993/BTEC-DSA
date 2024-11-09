@@ -16,6 +16,13 @@ public class Student {
         setRank();
     }
 
+    public Student(String[] data) {
+        this.id = data[0];
+        this.name = data[1];
+        this.mark = Double.valueOf(data[2]);
+        setRank();
+    }
+
     public String convertToRank() {
         if (mark > 0 && mark <= 5) {
             return "Fail";
