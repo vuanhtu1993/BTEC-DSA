@@ -9,7 +9,7 @@ public class Student {
     private String rank;
 
     // Constructors
-    public Student(String name, String id, double mark) {
+    public Student(String id, String name, double mark) {
         this.name = name;
         this.id = id;
         this.mark = mark;

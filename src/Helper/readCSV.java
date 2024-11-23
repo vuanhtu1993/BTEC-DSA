@@ -1,12 +1,11 @@
 package Helper;
 
+import Assignment.Student;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import Assignment.Student;
 
 public class readCSV {
     public static List<Student> csvToArray(String filePath) {
