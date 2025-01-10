@@ -7,17 +7,6 @@ public class App {
         Car c2 = new Car("Toyota", "red", "Cross", 2023);
         System.out.println(myCar);
         myCar.brake();
-        // Bài tập trên lớp
-        // Sử dụng ngôn ngữ Java tạo ra một lớp sinh viên BTEC
-        // Có các thuộc tính:
-        // - Mã sinh viên
-        // - Tên sinh viên
-        // - Lớp
-        // - DOB
-        // - Province
-        // Có các phương thức
-        // - In ra màn hình thông tin của sinh viên "Mã sv + Tên sv + lớp"
-        // - In ra tuổi của sinh viên
     }
 
 }
