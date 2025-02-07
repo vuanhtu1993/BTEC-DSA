@@ -34,8 +34,31 @@ public class MyLinkedList {
         Node current = head;
         while (current != null) {
             System.out.print(current.value);
-            System.out.print("->");
             current = current.next;
+            if (current == null) {
+                System.out.println("");
+            } else {
+                System.out.print("->");
+            }
         }
+    }
+
+    // Viết hàm lấy ra phần tử theo chỉ số
+    public int get(int index) {
+        Node current = head;
+        int count = 0;
+        while (current != null) {
+            if (count == index) {
+                return current.value;
+            }
+            current = current.next;
+            count++;
+        }
+        return 0;
+    }
+
+    // Viết hàm xoá phần tử theo chỉ số
+    public void remove(int index) {
+        // Student coding here
     }
 }

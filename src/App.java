@@ -10,7 +10,7 @@ public class App {
         cars.add("Mercedes");
         cars.add("BMW");
         cars.remove();
-        System.out.println(cars);
+        // System.out.println(cars);
 
         MyLinkedList numbers = new MyLinkedList(10);
         numbers.add(20);
@@ -19,6 +19,7 @@ public class App {
 
         // System.out.println(numbers);
         numbers.print();
+        System.out.println(numbers.get(2));
 
     }
 }
