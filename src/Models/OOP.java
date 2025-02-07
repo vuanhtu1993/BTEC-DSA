@@ -1,3 +1,7 @@
+import Car;
+
+package Models;
+
 class Vehicle {
     protected float speed;
 
