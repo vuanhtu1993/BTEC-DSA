@@ -18,8 +18,9 @@ public class App {
         numbers.add(50);
 
         // System.out.println(numbers);
+        numbers.remove(3);
         numbers.print();
-        System.out.println(numbers.get(2));
+        // System.out.println(numbers.get(2));
 
     }
 }

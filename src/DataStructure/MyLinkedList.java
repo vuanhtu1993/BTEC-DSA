@@ -58,7 +58,29 @@ public class MyLinkedList {
     }
 
     // Viết hàm xoá phần tử theo chỉ số
+    public void remove() {
+        if (head != null) {
+            head = head.next;
+        }
+    }
+
     public void remove(int index) {
         // Student coding here
+        int count = 0;
+        Node current = head;
+        while (current != null) {
+            if (count == index - 1) {
+                Node temp = current;
+                current = current.next;
+                if (current.next != null) {
+                    temp.next = current.next;
+                } else {
+                    temp.next = null;
+                }
+                break;
+            }
+            current = current.next;
+            count++;
+        }
     }
 }
