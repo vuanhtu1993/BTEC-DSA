@@ -1,26 +1,14 @@
-import DataStructure.MyLinkedList;
-import java.util.LinkedList;
+import DataStructure.MyStack;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        // String[] arrayCars = {"Vovol", "BMW"};
-        // Linked list in java
-        LinkedList<String> cars = new LinkedList<String>();
-        cars.add("Vovol");
-        cars.add("Mercedes");
-        cars.add("BMW");
-        cars.remove();
-        // System.out.println(cars);
-
-        MyLinkedList numbers = new MyLinkedList(10);
-        numbers.add(20);
-        numbers.add(40);
-        numbers.add(50);
-
-        // System.out.println(numbers);
-        numbers.remove(3);
-        numbers.print();
-        // System.out.println(numbers.get(2));
-
+        // ======== Stack ===========
+        MyStack stack = new MyStack();
+        stack.push(10);
+        stack.push(20);
+        stack.push(50);
+        stack.push(60);
+        stack.push(80);
+        System.out.println(stack.toString());
     }
 }
