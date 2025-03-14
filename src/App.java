@@ -1,22 +1,23 @@
-import DataStructure.Tree;
+import DataStructure.BST_Tree;
 import DataStructure.TreeNode;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        Tree myTree = new Tree(29);
-        // myTree.root
-        TreeNode node2 = new TreeNode(41);
-        TreeNode node3 = new TreeNode(6);
-        TreeNode node4 = new TreeNode(17);
-        TreeNode node5 = new TreeNode(81);
-        TreeNode node6 = new TreeNode(9);
-        TreeNode node7 = new TreeNode(40);
-        myTree.root.left = node2;
-        myTree.root.right = node3;
-        node2.left = node4;
-        node2.right = node5;
-        node3.left = node6;
-        node3.right = node7;
-        System.out.println(myTree);
+        BST_Tree bstTree = new BST_Tree();
+        TreeNode node55 = new TreeNode(55);
+        TreeNode node29 = new TreeNode(29);
+        TreeNode node3 = new TreeNode(-3);
+        TreeNode node42 = new TreeNode(42);
+        TreeNode node87 = new TreeNode(87);
+        TreeNode node60 = new TreeNode(60);
+        TreeNode node91 = new TreeNode(91);
+        bstTree.root = node55;
+        node55.left = node29;
+        node29.left = node3;
+        node29.right = node42;
+        node55.right = node87;
+        node87.left = node60;
+        node87.right = node91;
+        System.out.println(bstTree.contains(92));
     }
 }
