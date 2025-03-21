@@ -1,23 +1,21 @@
-import DataStructure.BST_Tree;
-import DataStructure.TreeNode;
+import Algorithm.MergeSort;
+import java.util.Arrays;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        BST_Tree bstTree = new BST_Tree();
-        TreeNode node55 = new TreeNode(55);
-        TreeNode node29 = new TreeNode(29);
-        TreeNode node3 = new TreeNode(-3);
-        TreeNode node42 = new TreeNode(42);
-        TreeNode node87 = new TreeNode(87);
-        TreeNode node60 = new TreeNode(60);
-        TreeNode node91 = new TreeNode(91);
-        bstTree.root = node55;
-        node55.left = node29;
-        node29.left = node3;
-        node29.right = node42;
-        node55.right = node87;
-        node87.left = node60;
-        node87.right = node91;
-        System.out.println(bstTree.contains(92));
+        int n = 100000;
+        int[] testArray = new int[n];
+        for (int i = 0; i < testArray.length; i++) {
+            testArray[i] = (int) (Math.random() * 100000000);
+        }
+        long startTime = System.currentTimeMillis();
+        // int[] testArray = { 20, 50, 40, 80, 60, 70, 10, 90 };
+
+        MergeSort.mergeSort(testArray);
+        // bubbleSort.bubbleSort(testArray);
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println(Arrays.toString(testArray));
+        System.out.println(estimatedTime);
+
     }
 }

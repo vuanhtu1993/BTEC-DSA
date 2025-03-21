@@ -30,6 +30,52 @@ public class BST_Tree {
             }
         }
     }
-    // Container recursive
 
+    // Container recursive
+    public boolean recursiveContain(int value) {
+        return recursiveContain(root, value);
+    }
+
+    private boolean recursiveContain(TreeNode node, int value) {
+        if (node == null) {
+            return false;
+        } else if (node.data == value) {
+            return true;
+        }
+        if (value > node.data) {
+            return recursiveContain(node.right, value);
+        } else {
+            return recursiveContain(node.left, value);
+        }
+    }
+
+    // Insert node into tree
+    public void insert(int value) {
+        root = insert(root, value);
+    }
+
+    private TreeNode insert(TreeNode node, int value) {
+        if (node == null) {
+            node = new TreeNode(value);
+        } else {
+            if (value < node.data) {
+                node.left = insert(node.left, value);
+            } else {
+                node.right = insert(node.right, value);
+            }
+        }
+        return node;
+    }
+
+    public void print() {
+        print(root, "   ");
+    }
+
+    private void print(TreeNode node, String indent) {
+        if (node != null) {
+            print(node.right, indent + "    ");
+            System.out.println(indent + node.data);
+            print(node.left, indent + "     ");
+        }
+    }
 }
